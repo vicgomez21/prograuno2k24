@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1712159473 source:c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\8. juegos\buscaminas\buscaminas\main.cpp
+	<iostream>
+	<unistd.h>
+
+1712159386 source:c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\8. juegos\buscaminas\buscaminas\src\juego.cpp
+	"Juego.h"
+
+1712159385 c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\8. juegos\buscaminas\buscaminas\include\juego.h
+
+1712159429 source:c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\8. juegos\buscaminas\buscaminas\src\tablero.cpp
+	"Tablero.h"
+
+1712159386 c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\8. juegos\buscaminas\buscaminas\include\tablero.h
+
+1712159994 source:c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\8. juegos\buscaminas\buscaminas\src\celda.cpp
+	"Celda.h"
+
+1712159782 c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\8. juegos\buscaminas\buscaminas\include\celda.h
+
