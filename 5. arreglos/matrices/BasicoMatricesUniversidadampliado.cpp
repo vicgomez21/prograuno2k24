@@ -42,6 +42,11 @@ void llamaCiclo()
     float promedio_facultad_3;
     //Declaraciòn de matriz que almacenarà los nombres de los alumnos
     char alumnos[NUMERO_ALUMNOS][MAXIMA_LONGITUD_CADENA] = {"Carlos","Luis","Maria","Pedro","Juan"};
+    int numeroCalculos=0; //Variable que guardarà cuantas veces se realizaron los calculos
+    //Variables que acumularan las veces que una facultad gano en los promedios
+    int ganadosFacultad_1=0;
+    int ganadosFacultad_2=0;
+    int ganadosFacultad_3=0;
     //Ciclo repetitivo del comparativo de facultades
     do
     {
@@ -62,21 +67,25 @@ void llamaCiclo()
         {
             //Facultad 1 es mayor
             cout << " La facultad con el mejor promedio es : " << "Facultad de Ingenieria" << " Promedio: " << promedio_facultad_1 << endl;
+            ganadosFacultad_1++;
         } else
         if (promedio_facultad_2 > promedio_facultad_1 && promedio_facultad_2 > promedio_facultad_3)
         {
             //Facultad 2 es mayor
             cout << " La facultad con el mejor promedio es : " << "Facultad de Arquitectura" << " Promedio: " << promedio_facultad_2 << endl;
+            ganadosFacultad_2++;
         } else
         if (promedio_facultad_3 > promedio_facultad_2 && promedio_facultad_3 > promedio_facultad_1)
         {
             //Facultad 3 es mayor
             cout << " La facultad con el mejor promedio es : " << "Facultad de Administracion" << " Promedio: " << promedio_facultad_3 << endl;
+            ganadosFacultad_3++;
         } else
         {
             //Varias facultades son iguales en promedio
             cout << " Algunas facultades tienen el mismo promedio " << endl << endl;
         }
+        numeroCalculos++;
         cout << "Desea otro calculo (s/n)? ";
         cin >> opcion;
         if (opcion == 'n')
@@ -84,7 +93,24 @@ void llamaCiclo()
             repetir=false;
         }
     } while (repetir);
+    cout << "Datos Finales -> Calculos realizados: " << numeroCalculos << " La mejor facultad es: " << endl;
+    if (ganadosFacultad_1>ganadosFacultad_2 && ganadosFacultad_1>ganadosFacultad_3)
+    {
+        cout << "** Facultad de Ingenieria ** con " << ganadosFacultad_1 << " veces ganadas" << endl;
+    } else
+    if (ganadosFacultad_2>ganadosFacultad_1 && ganadosFacultad_2>ganadosFacultad_3)
+    {
+        cout << "** Facultad de Arquitectura ** con " << ganadosFacultad_2 << " veces ganadas" << endl;
+    } else
+    if (ganadosFacultad_3>ganadosFacultad_1 && ganadosFacultad_3>ganadosFacultad_2)
+    {
+       cout << "** Facultad de Administraciòn ** con " << ganadosFacultad_3 << " veces ganadas" << endl;
+    } else
+    {
+       cout << " Las facultades tienen el mismo promedio " << endl << endl;
+    }
 }
+
 int busquedaAleatorios(int minimo, int maximo)
 {
     //Calculo de valores aleatorios tomando como base la nota minima y màxima del parcial

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1711985032 source:c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\7. librerias\primerejemplo\ejemplolibreria_0\main.cpp
+	<iostream>
+	"Persona.h"
+
+1711986069 source:c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\7. librerias\primerejemplo\ejemplolibreria_0\src\persona.cpp
+	"Persona.h"
+	<iostream>
+
+1711986069 c:\users\soporte\documents\profesional\umg\didactica2k24\prograuno2k24\7. librerias\primerejemplo\ejemplolibreria_0\include\persona.h
+
