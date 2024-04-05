@@ -5,25 +5,25 @@
 class Config
 {
     public:
-        Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrollador, int vidasTablero);
-        int getFilasTablero();
-        int setFilasTablero(int filasTablero);
-        int getColumnasTablero();
-        int setColumnasTablero(int columnasTablero);
-        int getMinasTablero();
-        int setMinasTablero(int minasTablero);
-        bool getModoDesarrollador();
-        bool setModoDesarrollador(bool modoDesarrollador);
-        int getVidasTablero();
-        int setVidasTablero(int vidasTablero);
-
+        Config(int filasTablero, int columnasTablero, int minasTablero, bool modoDesarrolladorTablero, int vidasTablero);
+        int getfilasTablero();
+        int setfilasTablero(int filasTablero);
+        int getcolumnasTablero();
+        int setcolumnasTablero(int columnasTablero);
+        int getminasTablero();
+        int setminasTablero(int minasTablero);
+        bool getmodoDesarrolladorTablero();
+        bool setmodoDesarrolladorTablero(bool modoDesarrolladorTablero);
+        int getvidasTablero();
+        int setvidasTablero(int vidasTablero);
+        void menuConfiguracion();
     protected:
 
     private:
         int filasTablero;
         int columnasTablero;
         int minasTablero;
-        bool modoDesarrollador;
+        bool modoDesarrolladorTablero;
         int vidasTablero;
 };
 

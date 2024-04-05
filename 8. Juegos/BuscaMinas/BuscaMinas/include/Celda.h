@@ -1,20 +1,21 @@
 #ifndef CELDA_H
 #define CELDA_H
-
+//Libreria que guarda los atributos y los prototipos de los metodos utilizados para crear y administrar las celdas de juego
+//Fecha: 17 marzo 2023
 
 class Celda
 {
     public:
         Celda();
-        int getCoordenadaX();
+        Celda(int coordenadaX, int coordenadaY, bool estadoMina);
         int setCoordenadaX(int coordenadaX);
-        int getCoordenadaY();
+        int getCoordenadaX();
         int setCoordenadaY(int coordenadaY);
-        bool getMina();
+        int getCoordenadaY();
         bool setMina(bool estadoMina);
-        bool getMinaDescubierta();
+        bool getMina();
         bool setMinaDescubierta(bool minaDescubierta);
-
+        bool getMinaDescubierta();
         void imprimirCelda();
     protected:
 

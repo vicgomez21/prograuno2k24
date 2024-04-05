@@ -1,38 +1,51 @@
 #include <iostream>
 #include <unistd.h>
+#include "Juego.h"
+#include "Config.h"
 
 using namespace std;
 
 int main()
 {
-    const int FILAS_TABLERO = 5;
-    const int COLUMNAS_TABLERO = 5;
-    const int MINAS_EN_TABLERO = 3;
-    const int VIDAS_JUGADOR = 3;
-    const bool MODO_DESARROLLADOR = false;
-
+    const int FILASTABLERO = 5;
+    const int COLUMNASTABLERO = 5;
+    const int MINASENTABLERO = 3;
+    const bool MODODESARROLLADOR = true;
+    const int VIDASTABLERO = 3;
+    Config configuracionJuego(FILASTABLERO, COLUMNASTABLERO, MINASENTABLERO, MODODESARROLLADOR, VIDASTABLERO);
+    Juego juego(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero());
+    srand(getpid());
     int opciones;
     bool repetir = true;
     do
     {
         system("cls");
-        cout << "\n\n\t\tJuego BUSCAMINAS -Menu-" << endl;
-        cout << "\t\t--------------------------" << endl;
-        cout << "\t1. Configuracion" << endl;
-        cout << "\t2. Iniciar Juego" << endl;
-        cout << "\t3. Salir" << endl;
+        cout << "\n\n\t\tBUSCA MINAS -Menu-" << endl;
+        cout << "\t\t-------------------"<< endl;
+        cout << "\t\t1. Configuaracion del Juego" << endl;
+        cout << "\t\t2. Iniciar el Juego" << endl;
+        cout << "\t\t3. Salir del Juego" << endl;
+        cout << "\n\t\tIngrese una opcion: ";
         cin >> opciones;
         switch (opciones)
         {
         case 1:
+            {
+                configuracionJuego.menuConfiguracion();
                 break;
+            }
         case 2:
+            {
+              	Juego juegoTemporal(Tablero(configuracionJuego.getfilasTablero(), configuracionJuego.getcolumnasTablero(), configuracionJuego.getmodoDesarrolladorTablero()), configuracionJuego.getminasTablero());
+                juegoTemporal.iniciar();
+
+                system("pause");
                 break;
-        case 3:
-                repetir=false;
+            }
+        case 3: repetir = false;
                 break;
         }
-    } while(repetir);
-    cout << "Hello world!" << endl;
+    } while (repetir);
+    system("cls");
     return 0;
 }

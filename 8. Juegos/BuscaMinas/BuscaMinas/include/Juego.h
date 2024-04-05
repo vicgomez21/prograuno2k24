@@ -1,25 +1,24 @@
 #ifndef JUEGO_H
 #define JUEGO_H
-
+#include "Tablero.h"
 
 class Juego
 {
-    public:
-        Juego();
-        void colocarMinasAleatoriamente();
-        int solicitarFilaUsuario();
-        int solicitarColumnaUsuario();
-        bool jugadorGana();
-        void iniciar();
+private:
+	Tablero tablero;
+	int cantidadMinas;
 
-    protected:
-
-    private:
-            int cantidadMinas;
-
-            int aleatorioEnRango(int minimo, int maximo);
-            int filaAleatoria();
-            int columnaAleatoria();
+	int aleatorio_en_rango(int minimo, int maximo);
+	int filaAleatoria();
+	int columnaAleatoria();
+public:
+    Juego(Tablero tablero, int cantidadMinas);
+	void colocarMinasAleatoriamente();
+	int solicitarFilaUsuario();
+	int solicitarColumnaUsuario();
+	bool jugadorGana();
+	void iniciar();
+	void dibujarPortada(string nombreArchivo);
 };
 
 #endif // JUEGO_H
