@@ -22,7 +22,7 @@ int main()
         system("cls");
         cout << "\n\n\t\tBUSCA MINAS -Menu-" << endl;
         cout << "\t\t-------------------"<< endl;
-        cout << "\t\t1. Configuaracion del Juego" << endl;
+        cout << "\t\t1. Configuracion del Juego" << endl;
         cout << "\t\t2. Iniciar el Juego" << endl;
         cout << "\t\t3. Salir del Juego" << endl;
         cout << "\n\t\tIngrese una opcion: ";
