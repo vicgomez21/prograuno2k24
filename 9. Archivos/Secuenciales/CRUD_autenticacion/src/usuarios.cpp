@@ -24,7 +24,7 @@ bool usuarios::loginUsuarios(){
     int contador=0;
     bool ingresa=false;
     do{
-        system("cls");
+        //system("cls");
         cout<<"---------------------------"<<endl;
         cout<<" AUTENTICACION DE USUARIOS "<<endl;
         cout<<"---------------------------"<<endl;
@@ -127,7 +127,8 @@ int choice;
 }
 bool usuarios::buscar(string user, string passw )
 {
-	system("cls");
+	//system("cls");
+	cout << "entre a buscar " << endl;
 	fstream file;
 	int found=0;
 	file.open("Usuarios.txt",ios::in);
@@ -135,6 +136,7 @@ bool usuarios::buscar(string user, string passw )
 	{
 		cout<<"\n-------------------------Datos de la Persona buscada------------------------"<<endl;
 		cout<<"\n\t\t\tNo hay informacion...";
+		system("pause");
 	}
 	else
 	{
