@@ -1,4 +1,2 @@
-Hugo           Hugo           345343         UMG            conocida       
-2              Carlos         34343          UVG            CentroHistorico
-4              Lucia          343            UPANA          zona1          
-3              Diego          3434           UMG            conocida       
+2              Luis           555555         UMG            Zona           
+1              HugoB          454545         UVG            CentroH        
